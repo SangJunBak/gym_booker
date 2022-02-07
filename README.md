@@ -14,3 +14,44 @@ Currently it scrapes for PAC. If you want CIF, uncomment `GYM="CIF..."`.
 
 pip3 install python-dotenv
 pip3 install selenium
+
+## How it works
+
+`WANTED_TIMES` looks like this:
+
+```
+WANTED_TIMES = [
+    {
+        "day": "Mon",
+        "times": [],
+    },
+    {
+        "day": "Tue",
+        "times": [],
+    },
+    {
+        "day": "Wed",
+        "times": [],
+    },
+    {
+        "day": "Thu",
+        "times": ["1 - 1:50 PM", "2 - 2:50 PM", "3 - 3:50 PM", "4 - 4:50 PM"],
+    },
+    {
+        "day": "Fri",
+        "times": ["1 - 1:50 PM", "2 - 2:50 PM", "3 - 3:50 PM", "4 - 4:50 PM"],
+    },
+    {
+        "day": "Sat",
+        "times": ["1 - 1:50 PM", "2 - 2:50 PM", "3 - 3:50 PM", "4 - 4:50 PM"],
+    },
+    {
+        "day": "Sun",
+        "times": ["1 - 1:50 PM", "2 - 2:50 PM", "3 - 3:50 PM", "4 - 4:50 PM"],
+    },
+]
+```
+
+Make sure `times` is consistent with the other time string values. It's going to try all time slots in the array, prioritizing from first entry to last. It's going to stop once it books one.
+
+The scraper's going to poll every 10 minutes. You can adjust this by changing `POLL_TIME_MINUTES`.
