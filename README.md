@@ -4,3 +4,5 @@ Make sure you install Selenium and the Chrome web driver https://www.youtube.com
 Replace .env.example with .env using your Duo credentials.
 
 Once installed, run `python3 gym_booker.py`
+
+Make sure for the `DUO_CODES`, you replace the ones there with the ones linked to your account. You can do this by logging in and pressing "Enter a Pascode" then "Send me new codes".
