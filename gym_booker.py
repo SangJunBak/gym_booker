@@ -17,25 +17,25 @@ PASSWORD = os.getenv('PASSWORD')
 
 # Get this by requesting codes to your phone
 DUO_CODES = [
-    "1672294",
-    "2815623",
-    "3557830",
-    "4520783",
-    "5915495",
-    "6101500",
-    "7480460",
-    "8316658",
-    "9103451",
-    "0207308",
+    "1124688",
+    "2307437",
+    "3751850",
+    "4878848",
+    "5039164",
+    "6319011",
+    "7995994",
+    "8098173",
+    "9169761",
+    "0066362",
 ]
 
-POLL_TIME_MINUTES = 25
+POLL_TIME_MINUTES = 10
 
 # Formatting matters so keep it consistent
 WANTED_TIMES = [
     {
         "day": "Mon",
-        "times": ["2 - 2:50 PM", "3 - 3:50 PM"],
+        "times": [],
     },
     {
         "day": "Tue",
