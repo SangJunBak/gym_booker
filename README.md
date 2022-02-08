@@ -1,6 +1,6 @@
 ## Instructions
 
-Make sure you install Selenium and the Chrome web driver https://www.youtube.com/watch?v=2WVxzRD6Ds4.
+Make sure you install Selenium and the Chrome web driver https://www.youtube.com/watch?v=2WVxzRD6Ds4. Replace `WEBDRIVER_PATH` with wherever you put chromedriver.
 
 Replace .env.example with .env using your Duo credentials.
 
@@ -10,10 +10,14 @@ Make sure for the `DUO_CODES`, you replace the ones there with the ones linked t
 
 Currently it scrapes for PAC. If you want CIF, uncomment `GYM="CIF..."`.
 
+## Notes
+
+Make sure when the webdriver opens Chromium, the page is fullscreen so that nothing blocks the "date" buttons (i.e. banners). This is the cause of the error that says a button is unreachable.
+
 ## Dependencies
 
-pip3 install python-dotenv
-pip3 install selenium
+- pip3 install python-dotenv
+- pip3 install selenium
 
 ## How it works
 

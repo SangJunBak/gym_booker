@@ -17,21 +17,23 @@ PASSWORD = os.getenv('PASSWORD')
 
 # Get this by requesting codes to your phone
 DUO_CODES = [
-    "1124688",
-    "2307437",
-    "3751850",
-    "4878848",
-    "5039164",
-    "6319011",
-    "7995994",
-    "8098173",
-    "9169761",
-    "0066362",
+    "1749063",
+      "2661741",
+        "3417386",
+          "4729370",
+            "5999896",
+              "6655660",
+                "7996593",
+                  "8117851",
+                    "9825361",
+                      "0363351",
 ]
 
 POLL_TIME_MINUTES = 10
 
-# Formatting matters so keep it consistent
+WEBDRIVER_PATH = '/usr/local/bin/chromedriver'
+
+# Formatting matters so keep it consistent with 
 WANTED_TIMES = [
     {
         "day": "Mon",
@@ -63,10 +65,8 @@ WANTED_TIMES = [
     },
 ]
 
-# Check if already booked
-# After every booking, refresh the page
 
-driver = webdriver.Chrome('/usr/local/bin/chromedriver')
+driver = webdriver.Chrome(WEBDRIVER_PATH)
 
 driver.get('https://warrior.uwaterloo.ca/booking')
 
@@ -76,7 +76,7 @@ time.sleep(1)  # Let the user actually see something!
 pac_booking_button = driver.find_element_by_link_text('PAC Fitness Centre')
 pac_booking_button.click()
 
-time.sleep(2)  # Let the user actually see something!
+time.sleep(2) 
 
 login_button = driver.find_element_by_css_selector(
     "button[title='WATIAM USERS']")
